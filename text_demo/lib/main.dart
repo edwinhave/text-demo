@@ -11,51 +11,54 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-          appBar: AppBar(
-              title: const Text('Flutter Demo'),
-              backgroundColor: Colors.amber.shade400),
-          body: const Padding(
-            padding: EdgeInsets.fromLTRB( 10, 15, 20, 0),
-            child: Row (children: [
-              Text(
-                'Lorem, ipsum dolor sit amet consectetur suscipit nobis, aliquam, non consectetur. Magnam.',
-                maxLines: 2,
-                textAlign: TextAlign.center,
-                style: TextStyle(backgroundColor: Color.fromRGBO(12, 22, 32, 0.965), fontSize: 15,color: Colors.blueAccent,fontWeight: FontWeight.bold),
-              ),SizedBox(height: 100),
-              Text(
-                  'ALorem, ipsum dolor sit amet consectetur suscipit nobis, aliquam, non consectetur. Magnam.',
-                  overflow: TextOverflow.clip,
-                  style: TextStyle(fontSize: 15,color: Colors.deepOrangeAccent,fontWeight: FontWeight.bold)),
-                  SizedBox(height: 20),
-              Text(
-                  'lorem, ipsum dolor sit amet consectetur suscipit nobis, aliquam, non consectetur. Magnam.',
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(fontSize: 15,color: Colors.lightGreenAccent,fontWeight: FontWeight.bold)),
-                  SizedBox(height: 20),
-              Text(
-                'lorem, ipsum dolor sit amet consectetur suscipit nobis, aliquam, non consectetur. Magnam.',
-                overflow: TextOverflow.fade),
-                SizedBox(height: 20),
-              Text(
-                'lorem, ipsum dolor sit amet consectetur suscipit nobis, aliquam, non consectetur. Magnam.',
-                overflow: TextOverflow.visible),
-                SizedBox(height: 20),
-              Text(
-                'lorem, ipsum dolor sit amet consectetur suscipit nobis, aliquam, non consectetur. Magnam.',
-                softWrap: true),
-                SizedBox(height: 20),
-              Text.rich(TextSpan(text: 'Hello Warudo', children: <TextSpan>[
-                TextSpan(
-                    text: 'Bagus', style: TextStyle(fontStyle: FontStyle.italic)),
-                TextSpan(
-                    text: 'World', style: TextStyle(fontWeight: FontWeight.bold))
-              ]
-            )
-                  )
-            ]
-                  ),
-          ),
+        appBar: AppBar(
+            title: const Text('Biodata'),
+            backgroundColor: Colors.amber.shade400),
+        body: const Padding(
+          padding: EdgeInsets.fromLTRB(10, 15, 20, 0),
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            Text(
+              'BIODATA',
+              maxLines: 2,
+              textAlign: TextAlign.left,
+              style: TextStyle(
+                  backgroundColor: Color.fromRGBO(12, 22, 32, 0.965),
+                  fontSize: 15,
+                  color: Colors.blueAccent,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 10),
+            Text.rich(TextSpan(children: <TextSpan>[
+              TextSpan(
+                  text: 'Nama:', style: TextStyle(fontStyle: FontStyle.italic)),
+              TextSpan(
+                  text: 'Edwin', style: TextStyle(fontStyle: FontStyle.italic)),
+            ])),
+            Text.rich(TextSpan(children: <TextSpan>[
+              TextSpan(
+                  text: 'Kelahiran (TTL):',
+                  style: TextStyle(fontStyle: FontStyle.italic)),
+              TextSpan(
+                  text: 'Bandung, 1 November 2001',
+                  style: TextStyle(fontStyle: FontStyle.italic)),
+            ])),
+            Text.rich(TextSpan(children: <TextSpan>[
+              TextSpan(
+                  text: 'Alamat:',
+                  style: TextStyle(fontStyle: FontStyle.italic)),
+              TextSpan(
+                  text: 'Jl. Rahayu',
+                  style: TextStyle(fontStyle: FontStyle.italic)),
+            ])),
+            Text.rich(TextSpan(children: <TextSpan>[
+              TextSpan(
+                  text: 'Hobi:', style: TextStyle(fontStyle: FontStyle.italic)),
+              TextSpan(
+                  text: 'Main', style: TextStyle(fontStyle: FontStyle.italic)),
+            ])),
+          ]),
+        ),
       ),
     );
   }
